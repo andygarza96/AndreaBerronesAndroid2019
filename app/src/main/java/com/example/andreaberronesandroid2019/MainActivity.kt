@@ -12,8 +12,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         btnHelloWorld.setOnClickListener {
             println("Check 1")
-            val intent =Intent(this, HelloWold::class.java)
+            val intent = Intent(this, HelloWold::class.java)
+            startActivity(intent)
+        }
+        btnTimeFigther.setOnClickListener {
+            println("Check 2")
+            val intent = Intent(this, TimeFigther::class.java)
             startActivity(intent)
         }
     }
 }
+
+
+

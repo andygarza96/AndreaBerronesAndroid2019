@@ -10,6 +10,6 @@ class HelloWold : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hello_wold)
         println("Hello World")
-        Log.d( "Berrones","perro")
+        Log.d( "Berrones","Hello")
     }
 }

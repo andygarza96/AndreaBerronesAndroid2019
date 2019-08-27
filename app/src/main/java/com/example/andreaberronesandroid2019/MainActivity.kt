@@ -20,6 +20,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, TimeFigther::class.java)
             startActivity(intent)
         }
+        btnDialogo.setOnClickListener {
+            println("Check 4")
+            val intent = Intent(this, Dialogo::class.java)
+            startActivity(intent)
+        }
     }
 }
 

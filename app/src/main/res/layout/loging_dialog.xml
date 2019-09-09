@@ -7,7 +7,7 @@
             android:id="@+id/txtName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="string/hint_nombre"
+            android:hint="@string/hint_nombre"
     />
     <EditText
             android:id="@+id/txtEmail"

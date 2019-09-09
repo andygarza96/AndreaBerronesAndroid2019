@@ -4,6 +4,8 @@ import android.content.IntentSender
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_time_figther.*
@@ -11,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_time_figther.*
 class TimeFigther : AppCompatActivity() {
         var score = 0
         lateinit var countDownTimer: CountDownTimer
-        val initialCountDown: Long = 6000
+        val initialCountDown: Long = 60000
         val countDowninterval: Long = 1000
         var gameStarted = false
 
@@ -35,6 +37,8 @@ class TimeFigther : AppCompatActivity() {
 
         }
         btnTapMe.setOnClickListener {
+           val bounceAnimation = AnimationUtils.loadAnimation(this, R.anim.bounce)
+            it.startAnimation(bounceAnimation)
             incrementScore()
 
         }
@@ -52,6 +56,8 @@ class TimeFigther : AppCompatActivity() {
         score = score+1
         val newScore = getString(R.string.tap_score, score.toString())
         txtScoreTap.text=newScore
+        val bounceAnimation = AnimationUtils.loadAnimation(this, R.anim.bounce)
+            txtScoreTap.startAnimation(bounceAnimation)
     }
     private fun endGame(){
         Toast.makeText(this, "Time's up Your score was: ${score.toString()}", Toast.LENGTH_LONG).show()

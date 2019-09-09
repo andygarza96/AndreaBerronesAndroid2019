@@ -20,9 +20,24 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, TimeFigther::class.java)
             startActivity(intent)
         }
+        btnConverter.setOnClickListener {
+            println("Check 3")
+            val intent = Intent(this, Converter::class.java)
+            startActivity(intent)
+        }
         btnDialogo.setOnClickListener {
             println("Check 4")
             val intent = Intent(this, Dialogo::class.java)
+            startActivity(intent)
+        }
+        btnDialogManagment.setOnClickListener {
+            println("Check 5")
+            val intent = Intent(this, DialogManagment::class.java)
+            startActivity(intent)
+        }
+        btnPlayground.setOnClickListener {
+            println("Check 6")
+            val intent = Intent(this, Playground::class.java)
             startActivity(intent)
         }
     }

@@ -8,4 +8,6 @@
     <string name="hint_contraseña">Contraseña</string>
     <string name="login">Login</string>
     <string name="cancelar">Cancelar</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="celsius">Celsius</string>
 </resources>

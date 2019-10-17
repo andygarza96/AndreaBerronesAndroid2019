@@ -40,6 +40,15 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Playground::class.java)
             startActivity(intent)
         }
+        btnPreferences.setOnClickListener {
+            println("Check 7")
+            val intent = Intent(this, Preferences::class.java)
+            startActivity(intent)
+        }
+        btnShake.setOnClickListener {
+            println("shake shake shake")
+            startActivity(Intent(this, ShakeActivity::class.java))
+        }
     }
 }
 

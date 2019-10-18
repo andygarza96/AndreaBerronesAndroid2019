@@ -7,7 +7,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,6 +50,10 @@ class MainActivity : AppCompatActivity() {
         btnShake.setOnClickListener {
             println("shake shake shake")
             startActivity(Intent(this, ShakeActivity::class.java))
+        }
+        btnShake.setOnClickListener {
+            println("scan")
+            startActivity(Intent(this, IMC::class.java))
         }
     }
 }
